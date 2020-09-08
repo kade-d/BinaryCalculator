@@ -14,7 +14,7 @@
    <children>
       <AnchorPane prefHeight="411.0" prefWidth="355.0">
          <children>
-            <TextField alignment="CENTER_RIGHT" layoutX="22.0" layoutY="19.0" prefHeight="66.0" prefWidth="312.0" text="0">
+            <TextField fx:id="calculatorDisplay" alignment="CENTER_RIGHT" layoutX="22.0" layoutY="19.0" prefHeight="66.0" prefWidth="312.0" text="0">
                <font>
                   <Font size="30.0" />
                </font>
@@ -49,12 +49,12 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="151.0" layoutY="193.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="118.0" text="1">
+            <Button layoutX="151.0" layoutY="193.0" mnemonicParsing="false" onAction="#onePressed" prefHeight="199.0" prefWidth="118.0" text="1">
                <font>
                   <Font size="48.0" />
                </font>
             </Button>
-            <Button layoutX="23.0" layoutY="193.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="118.0" text="0">
+            <Button layoutX="23.0" layoutY="193.0" mnemonicParsing="false" onAction="#zeroPressed" prefHeight="199.0" prefWidth="118.0" text="0">
                <font>
                   <Font size="48.0" />
                </font>
