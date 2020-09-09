@@ -2,6 +2,7 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 
@@ -31,14 +32,18 @@ public class Controller {
         calculatorDisplay.setTextFormatter(textFormatter);
     }
 
+    public Button binaryDecimalButton;
+
     public void binaryDecimalPressed(ActionEvent actionEvent) {
         String displayText = calculatorDisplay.getText();
         String convertedText;
         if (isDisplayBinary){
             convertedText = convertBinaryToDecimal(displayText);
+            binaryDecimalButton.setText("Decimal");
         }
         else {
             convertedText = convertDecimalToBinary(displayText);
+            binaryDecimalButton.setText("Binary");
         }
         isDisplayBinary = !isDisplayBinary;
         calculatorDisplay.setText(convertedText);
