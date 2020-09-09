@@ -2,12 +2,14 @@ package sample.util;
 
 public class BinaryConverter {
 
-    static int convertBinaryToDecimal(String binaryNumber){
-        return Integer.parseInt(binaryNumber, 2);
+    public static String convertBinaryToDecimal(String binaryNumber){
+        int decimalNumber = Integer.parseInt(binaryNumber, 2);
+        return Integer.toString(decimalNumber);
     }
 
-    static String convertDecimalToBinary(int decimalNumber){
-        return Integer.toBinaryString(decimalNumber);
+    public static String convertDecimalToBinary(String decimalNumber){
+        int parsedNum = Integer.parseInt(decimalNumber);
+        return Integer.toBinaryString(parsedNum);
     }
 
 }
