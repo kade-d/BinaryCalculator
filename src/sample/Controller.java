@@ -10,12 +10,16 @@ import java.util.function.UnaryOperator;
 public class Controller {
     public TextField calculatorDisplay;
 
+    private boolean isDisplayBinary = true;
+
     @FXML
     public void initialize() {
         UnaryOperator<TextFormatter.Change> filter = change -> {
             String text = change.getText();
 
-            if (text.matches("[0-1]*")) {
+            String regex = isDisplayBinary ? "[0-1]*" : "[0-9]*";
+
+            if (text.matches(regex)) {
                 return change;
             }
 
@@ -31,5 +35,9 @@ public class Controller {
 
     public void zeroPressed(ActionEvent actionEvent) {
         calculatorDisplay.appendText("0");
+    }
+
+    public void binaryDecimalPressed(ActionEvent actionEvent) {
+        isDisplayBinary = !isDisplayBinary;
     }
 }

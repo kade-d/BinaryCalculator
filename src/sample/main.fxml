@@ -74,7 +74,7 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="23.0" layoutY="92.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="181.0" text="Binary/Decimal">
+            <Button layoutX="23.0" layoutY="92.0" mnemonicParsing="false" onAction="#binaryDecimalPressed" prefHeight="44.0" prefWidth="181.0" text="Binary/Decimal">
                <font>
                   <Font size="20.0" />
                </font>
