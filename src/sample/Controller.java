@@ -40,4 +40,31 @@ public class Controller {
     public void binaryDecimalPressed(ActionEvent actionEvent) {
         isDisplayBinary = !isDisplayBinary;
     }
+
+    public void clearPressed(ActionEvent actionEvent) {
+    }
+
+    public void deletePressed(ActionEvent actionEvent) {
+    }
+
+    public void squareRootPressed(ActionEvent actionEvent) {
+    }
+
+    public void squaredPressed(ActionEvent actionEvent) {
+    }
+
+    public void dividePressed(ActionEvent actionEvent) {
+    }
+
+    public void timesPressed(ActionEvent actionEvent) {
+    }
+
+    public void minusPressed(ActionEvent actionEvent) {
+    }
+
+    public void plusPressed(ActionEvent actionEvent) {
+    }
+
+    public void equalsPressed(ActionEvent actionEvent) {
+    }
 }

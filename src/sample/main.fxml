@@ -19,32 +19,32 @@
                   <Font size="30.0" />
                </font>
             </TextField>
-            <Button layoutX="277.0" layoutY="92.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="56.0" text="⌫">
+            <Button layoutX="277.0" layoutY="92.0" mnemonicParsing="false" onAction="#deletePressed" prefHeight="33.0" prefWidth="56.0" text="⌫">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="277.0" layoutY="142.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="56.0" text="÷">
+            <Button layoutX="277.0" layoutY="142.0" mnemonicParsing="false" onAction="#dividePressed" prefHeight="33.0" prefWidth="56.0" text="÷">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="277.0" layoutY="193.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="56.0" text="×">
+            <Button layoutX="277.0" layoutY="193.0" mnemonicParsing="false" onAction="#timesPressed" prefHeight="44.0" prefWidth="56.0" text="×">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="277.0" layoutY="245.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="56.0" text="-">
+            <Button layoutX="277.0" layoutY="245.0" mnemonicParsing="false" onAction="#minusPressed" prefHeight="33.0" prefWidth="56.0" text="-">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="277.0" layoutY="296.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="56.0" text="+">
+            <Button layoutX="277.0" layoutY="296.0" mnemonicParsing="false" onAction="#plusPressed" prefHeight="44.0" prefWidth="56.0" text="+">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="277.0" layoutY="346.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="56.0" text="=">
+            <Button layoutX="277.0" layoutY="346.0" mnemonicParsing="false" onAction="#equalsPressed" prefHeight="44.0" prefWidth="56.0" text="=">
                <font>
                   <Font size="20.0" />
                </font>
@@ -59,17 +59,17 @@
                   <Font size="48.0" />
                </font>
             </Button>
-            <Button layoutX="213.0" layoutY="92.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="56.0" text="C">
+            <Button layoutX="213.0" layoutY="92.0" mnemonicParsing="false" onAction="#clearPressed" prefHeight="33.0" prefWidth="56.0" text="C">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="151.0" layoutY="142.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="118.0" text="√">
+            <Button layoutX="151.0" layoutY="142.0" mnemonicParsing="false" onAction="#squareRootPressed" prefHeight="44.0" prefWidth="118.0" text="√">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="24.0" layoutY="142.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="118.0" text="x²">
+            <Button layoutX="24.0" layoutY="142.0" mnemonicParsing="false" onAction="#squaredPressed" prefHeight="44.0" prefWidth="118.0" text="x²">
                <font>
                   <Font size="20.0" />
                </font>
