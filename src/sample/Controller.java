@@ -42,9 +42,14 @@ public class Controller {
     }
 
     public void clearPressed(ActionEvent actionEvent) {
+        calculatorDisplay.clear();
     }
 
     public void deletePressed(ActionEvent actionEvent) {
+        if (calculatorDisplay.getLength() > 0) {
+            String textMinusLast = calculatorDisplay.getText(0, calculatorDisplay.getLength() - 1);
+            calculatorDisplay.setText(textMinusLast);
+        }
     }
 
     public void squareRootPressed(ActionEvent actionEvent) {
