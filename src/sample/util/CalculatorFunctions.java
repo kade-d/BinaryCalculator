@@ -1,4 +1,5 @@
 package sample.util;
+import java.lang.Math;
 
 public class CalculatorFunctions {
 
@@ -30,5 +31,38 @@ public class CalculatorFunctions {
         int answer = (int) Math.sqrt( (double) integerOne);
 
         return BinaryConverter.convertDecimalToBinary(Integer.toString(answer));
+    }
+
+    // multiply takes two binary numbers and multiplies them
+    public static String multiply(String binaryOne, String binaryTwo){
+
+        int integerOne = Integer.parseInt(BinaryConverter.convertBinaryToDecimal(binaryOne));
+        int integerTwo = Integer.parseInt(BinaryConverter.convertBinaryToDecimal(binaryTwo));
+
+        int answer = integerOne * integerTwo;
+
+        return BinaryConverter.convertDecimalToBinary(Integer.toString(answer));
+    }
+
+    // division takes two binary numbers and divides them
+    public static String division(String binaryOne, String binaryTwo){
+
+        int integerOne = Integer.parseInt(BinaryConverter.convertBinaryToDecimal(binaryOne));
+        int integerTwo = Integer.parseInt(BinaryConverter.convertBinaryToDecimal(binaryTwo));
+
+        int answer = integerOne / integerTwo;
+
+        return BinaryConverter.convertDecimalToBinary(Integer.toString(answer));
+    }
+
+    // square takes one binary number and multiplies it by itself
+    public static String square(String binaryOne){
+
+        double integerOne = Integer.parseInt(BinaryConverter.convertBinaryToDecimal(binaryOne));
+        double power = 2;
+
+        double answer = Math.pow(integerOne, power);
+
+        return BinaryConverter.convertDecimalToBinary(Double.toString(answer));
     }
 }
