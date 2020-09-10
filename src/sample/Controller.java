@@ -9,6 +9,7 @@ import javafx.scene.control.TextFormatter;
 import java.util.function.UnaryOperator;
 
 import static sample.util.BinaryConverter.*;
+import static sample.util.CalculatorFunctions.*;
 
 public class Controller {
     public TextField calculatorDisplay;
@@ -40,7 +41,7 @@ public class Controller {
 
     public Button binaryDecimalButton;
 
-    public void binaryDecimalPressed(ActionEvent actionEvent) {
+    public void convertBinaryDecimal(){
         String displayText = calculatorDisplay.getText();
         String convertedText;
         if (isDisplayBinary){
@@ -53,6 +54,10 @@ public class Controller {
         }
         isDisplayBinary = !isDisplayBinary;
         calculatorDisplay.setText(convertedText);
+    }
+
+    public void binaryDecimalPressed(ActionEvent actionEvent) {
+        convertBinaryDecimal();
     }
 
     public void clearPressed(ActionEvent actionEvent) {
@@ -70,6 +75,12 @@ public class Controller {
     }
 
     public void squareRootPressed(ActionEvent actionEvent) {
+        if(!isDisplayBinary){
+            convertBinaryDecimal();
+        }
+        String displayText = calculatorDisplay.getText();
+        String rootedNumber = squareRoot(displayText);
+        calculatorDisplay.setText(rootedNumber);
     }
 
     public void squaredPressed(ActionEvent actionEvent) {
