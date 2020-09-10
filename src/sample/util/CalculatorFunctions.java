@@ -1,6 +1,6 @@
 package sample.util;
 
-public class Functions {
+public class CalculatorFunctions {
 
     // addition takes two binary numbers and adds them together
     public static String addition(String binaryOne, String binaryTwo) {
