@@ -20,6 +20,11 @@ public class Controller {
         UnaryOperator<TextFormatter.Change> filter = change -> {
             String text = change.getText();
 
+            if(calculatorDisplay.getText().isEmpty()){
+                change.setText("0");
+                return change;
+            }
+
             String regex = isDisplayBinary ? "[0-1]*" : "[0-9]*";
 
             if (text.matches(regex)) {
@@ -50,13 +55,16 @@ public class Controller {
     }
 
     public void clearPressed(ActionEvent actionEvent) {
-        calculatorDisplay.clear();
+        calculatorDisplay.setText("0");
     }
 
     public void deletePressed(ActionEvent actionEvent) {
         if (calculatorDisplay.getLength() > 0) {
             String textMinusLast = calculatorDisplay.getText(0, calculatorDisplay.getLength() - 1);
             calculatorDisplay.setText(textMinusLast);
+        }
+        if(calculatorDisplay.getText().isEmpty()){
+            calculatorDisplay.setText("0");
         }
     }
 
