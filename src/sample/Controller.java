@@ -74,10 +74,14 @@ public class Controller {
         }
     }
 
-    public void squareRootPressed(ActionEvent actionEvent) {
+    private void displayBinary(){
         if(!isDisplayBinary){
             convertBinaryDecimal();
         }
+    }
+
+    public void squareRootPressed(ActionEvent actionEvent) {
+        displayBinary();
         String displayText = calculatorDisplay.getText();
         String rootedNumber = squareRoot(displayText);
         calculatorDisplay.setText(rootedNumber);
@@ -94,6 +98,21 @@ public class Controller {
         calculatorDisplay.appendText("0");
     }
 
+    String storedNumber;
+
+    private enum Operation {
+        DIVIDE, TIMES, MINUS, PLUS, UNSELECTED
+    }
+
+    private Operation currentOperation = Operation.UNSELECTED;
+
+    private void operationPressed(Operation chosenOperation){
+        displayBinary();
+        storedNumber = calculatorDisplay.getText();
+        currentOperation = chosenOperation;
+        calculatorDisplay.setText("0");
+    }
+
     public void dividePressed(ActionEvent actionEvent) {
     }
 
@@ -101,11 +120,32 @@ public class Controller {
     }
 
     public void minusPressed(ActionEvent actionEvent) {
+        operationPressed(Operation.MINUS);
     }
 
     public void plusPressed(ActionEvent actionEvent) {
+        operationPressed(Operation.PLUS);
     }
 
     public void equalsPressed(ActionEvent actionEvent) {
+        displayBinary();
+        String result = "0";
+        String displayText = calculatorDisplay.getText();
+        switch (currentOperation){
+            case DIVIDE:
+                break;
+            case TIMES:
+                break;
+            case MINUS:
+                result = subtraction(storedNumber, displayText);
+                break;
+            case PLUS :
+                result = addition(storedNumber, displayText);
+                break;
+            case UNSELECTED:
+                break;
+            default:
+        }
+        calculatorDisplay.setText(result);
     }
 }
