@@ -26,7 +26,7 @@ public class Controller {
 
             String text = change.getText();
 
-            String regex = isDisplayBinary ? "[0-1]*" : "[0-9]*";
+            String regex = isDisplayBinary ? "-?[0-1]*" : "-?[0-9]*";
 
             if (text.matches(regex)) {
                 return change;
