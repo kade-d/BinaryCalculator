@@ -24,7 +24,7 @@ public class Functions {
     }
 
     // square-root takes ont binary number and returns the floored answer
-    public static String squareroot(String binaryOne) {
+    public static String squareRoot(String binaryOne) {
         int integerOne = Integer.parseInt(BinaryConverter.convertBinaryToDecimal(binaryOne));
 
         int answer = (int) Math.sqrt( (double) integerOne);

@@ -18,12 +18,13 @@ public class Controller {
     @FXML
     public void initialize() {
         UnaryOperator<TextFormatter.Change> filter = change -> {
-            String text = change.getText();
 
             if(calculatorDisplay.getText().isEmpty()){
                 change.setText("0");
                 return change;
             }
+
+            String text = change.getText();
 
             String regex = isDisplayBinary ? "[0-1]*" : "[0-9]*";
 
