@@ -28,7 +28,7 @@ public class CalculatorFunctions {
     public static String squareRoot(String binaryOne) {
         int integerOne = Integer.parseInt(BinaryConverter.convertBinaryToDecimal(binaryOne));
 
-        int answer = (int) Math.sqrt( (double) integerOne);
+        int answer = (int) Math.sqrt(integerOne);
 
         return BinaryConverter.convertDecimalToBinary(Integer.toString(answer));
     }
