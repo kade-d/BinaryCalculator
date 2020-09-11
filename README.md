@@ -5,6 +5,9 @@ The JavaFX library might need to be added the first time you start up this proje
 
 A good guide to add it can be found [here](https://www.jetbrains.com/help/idea/javafx.html#add-javafx-lib)
 
+We use JUnit for the testing class Intellij can auto import it by following this guide
+https://www.jetbrains.com/help/idea/testing.html#add-testing-libraries
+
 ## Screenshots/Manual
 ![Demo of Calculator GIF](https://github.com/kade-d/BinaryCalculator/blob/master/assets/demo-1.gif)
 
