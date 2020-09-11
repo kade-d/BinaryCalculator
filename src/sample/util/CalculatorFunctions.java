@@ -24,7 +24,7 @@ public class CalculatorFunctions {
         return BinaryConverter.convertDecimalToBinary(Integer.toString(answer));
     }
 
-    // square-root takes ont binary number and returns the floored answer
+    // square-root takes one binary number and returns the floored answer
     public static String squareRoot(String binaryOne) {
         int integerOne = Integer.parseInt(BinaryConverter.convertBinaryToDecimal(binaryOne));
 
