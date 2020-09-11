@@ -61,8 +61,8 @@ public class CalculatorFunctions {
         double integerOne = Integer.parseInt(BinaryConverter.convertBinaryToDecimal(binaryOne));
         double power = 2;
 
-        double answer = Math.pow(integerOne, power);
+        int answer = (int) Math.pow(integerOne, power);
 
-        return BinaryConverter.convertDecimalToBinary(Double.toString(answer));
+        return BinaryConverter.convertDecimalToBinary(Integer.toString(answer));
     }
 }

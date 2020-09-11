@@ -88,6 +88,10 @@ public class Controller {
     }
 
     public void squaredPressed(ActionEvent actionEvent) {
+        displayBinary();
+        String displayText = calculatorDisplay.getText();
+        String squaredNumber = square(displayText);
+        calculatorDisplay.setText(squaredNumber);
     }
 
     public void onePressed(ActionEvent actionEvent) {
@@ -114,9 +118,11 @@ public class Controller {
     }
 
     public void dividePressed(ActionEvent actionEvent) {
+        operationPressed(Operation.DIVIDE);
     }
 
     public void timesPressed(ActionEvent actionEvent) {
+        operationPressed(Operation.TIMES);
     }
 
     public void minusPressed(ActionEvent actionEvent) {
