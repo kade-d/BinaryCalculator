@@ -139,8 +139,10 @@ public class Controller {
         String displayText = calculatorDisplay.getText();
         switch (currentOperation){
             case DIVIDE:
+                result = division(storedNumber, displayText);
                 break;
             case TIMES:
+                result = multiply(storedNumber, displayText);
                 break;
             case MINUS:
                 result = subtraction(storedNumber, displayText);
