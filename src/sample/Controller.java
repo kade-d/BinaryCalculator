@@ -8,7 +8,8 @@ import javafx.scene.control.TextFormatter;
 
 import java.util.function.UnaryOperator;
 
-import static sample.util.BinaryConverter.*;
+import static sample.util.BinaryConverter.convertBinaryToDecimal;
+import static sample.util.BinaryConverter.convertDecimalToBinary;
 import static sample.util.CalculatorFunctions.*;
 
 public class Controller {
